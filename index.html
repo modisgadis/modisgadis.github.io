@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title>GadisModis</title>
+   <link href="images/icon.png" rel="icon">
+
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
+
+   <style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+   background-image: url('images/search.png');
+   background-size: 25px;
+   background-position: 10px 12px;
+   background-repeat: no-repeat;
+   width: 100%;
+   font-size: 16px;
+   padding: 12px 20px 12px 40px;
+   border: 1px solid #ddd;
+   margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+ width: 100%;
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+
+</head>
+
+<body class="gradients" data-spy="scroll" data-target=".navbar" data-offset="90">
+
+<!--PreLoader-->
+<div class="loader">
+   <div class="loader-inner">
+      <div class="circle"></div>
+   </div>
+</div>
+<!--PreLoader Ends-->
+
+<!--About us-->
+<section id="aboutus" class="padding_half">
+   <div class="container">
+      <div class="row aboutus-wrapp d-flex justify-content-center align-items-center">
+
+         <div class="col-lg-8 col-md-7 col-sm-7" style="text-align: center">
+            <div class="image bottom20">
+               <div align="center">
+               <img src="images/gadis-modis.png" style="max-width: 30%;max-height: 30%; border-radius: 20%" alt="image">
+               </div>
+            </div>
+            <div class="bottom35">
+               <h2 class="text-capitalize fontbold">
+                  <span class="gradient_color_two">Hai</span>
+                  <span class="gradient_color_one">Gadis</span>
+               </h2>
+               <h4 class="text-capitalize font-xlight darkcolor">
+                  <span class="font-normal ">Yuk</span>
+                  
+                  <span class="font-xlight">Pilih Rekomendasi Pilihan</span>
+                  <span class="font-normal color-two">Kamu</span>
+               </h4>
+            </div>
+            <div class="bottom25">
+               <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Cari produk keinginanmu.." title="Type in a name">
+            </div>
+            <ul id="myUL">
+               <li>
+                  <div class="bottom25">
+                     <a href="https://shopee.co.id/OUTER-DRESS-TULLE-i.4956074.8009479642?utm_source=an_11373640000&utm_medium=affiliates&utm_campaign=-&utm_content=dress----" class="button gradient_bg_one" style="text-align: center"><span style="float: left;">1.</span> Outer Dress Tule</a>
+                  </div>
+               </li>
+               <li>
+                  <div class="bottom25">
+                     <a href="https://shopee.co.id/180x75-JILBAB-PASHMINA-CERUTY-BABYDOLL-PREMIUM-PASHMINA-LOZY-CERUTI-BABYDOLL-TEPI-JAHIT-i.93076834.7458246043" class="button gradient_bg_two" style="text-align: center"><span style="float: left;">2.</span> Pasmina Ceruty Babydoll </a>
+                  </div>
+               </li>
+               <li>
+                  <div class="bottom25">
+                     <a href="https://shopee.co.id/ZURI-tanktop-i.4956074.9115465200" class="button gradient_bg_three" style="text-align: center"><span style="float: left;">3.</span> Zury Tanktop</a>
+                  </div>
+               </li>
+               <!-- <li>
+                  <div class="bottom25">
+                     <a href="#." class="button gradient_bg_four" style="text-align: center"><span style="float: left;">4.</span> Berangkat ipsum </a>
+                  </div>
+               </li>
+               <li>
+                  <div class="bottom25">
+                     <a href="#." class="button gradient_bg_five" style="text-align: center"><span style="float: left;">5.</span> Learn More lorem ipsum </a>
+                  </div>
+               </li> -->
+            </ul>         
+         </div>
+      </div>
+   </div>
+</section>
+
+<!--Site Footer Here-->
+<footer id="site-footer" class="padding_half">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12 col-sm-12 text-center">
+            <ul class="social-icons bottom25 wow fadeInUp" data-wow-delay="300ms">
+               <li><a href="#."><i class="fab fa-whatsapp"></i> </a> </li>
+               <li><a href="https://www.instagram.com/modis_gadis/"><i class="fab fa-instagram"></i> </a> </li>
+            </ul>
+            <p class="copyrights wow fadeInUp" data-wow-delay="400ms"> &copy; 2021. Made with love by <a href="#.">GadisModis</a> </p>
+         </div>
+      </div>
+   </div>
+</footer>
+
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.1.1.min.js"></script>
+
+<!--Bootstrap Core-->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/functions.js"></script>
+
+</body>
+</html>
